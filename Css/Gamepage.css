@@ -1,0 +1,29 @@
+#container{
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    margin-bottom: 21px;
+}
+#header{
+    height: 150px;
+    background-color: coral;
+}
+#side{
+    width: 150px;
+    height: 400px;
+    background-color: coral;
+    float: left;
+}
+#main{
+    width: 650;
+    height: 400px;
+    background-color: white;
+    float: right;
+}
+#footer{
+    height: 100px;
+    background-color: beige;
+    clear: both;
+}

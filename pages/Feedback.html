@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Feedback</title>
+    <style>
+        #Cont {
+            border-radius: 15px;
+             padding: 20px; 
+             border-width:5px; 
+            align-items: center;
+            border-style:outset;
+            margin: 0 auto;
+  width: 350px;
+  height: 430px; 
+} 
+.Lego {
+    text-align: center;
+}
+
+
+.Bs {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04F5BA;
+  width:200px;
+  height:50px;
+  padding: 16px 32px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+
+.Bs:hover {
+  background-color: #04F5BA;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div id="Cont" >
+        <h2 style="text-align: center;"> Feedback</h2>
+        <form action="">
+            <input type="radio"   name="top" onclick="odd()" id="Anos" value="A" > Anonymous</input><br><br>
+            <input type="radio" name="top" id="Nuser" onclick= "add()" value="NU"> Named User</input><br><br>
+            <div id ="no">
+            <label for = "name">Name: </label>
+            <input type="text" name="nametext" id="name"><br><br>
+            <label for ="email">Email Address:</label>
+            <input type="text" name= "email" id= "Emp"><br><br>
+            <label for="OAD">Which robot player type would you most likely play against?</label></br>
+             <select style="width: 100px;" id="OAD" name="cars">
+             <option value="J">John</option>
+             <option value="B">Brad</option>
+             <option value="p">Pickle Rick</option>  
+  </select><br><br>
+  <label for="test">Would you like to be a tester for the next game release?</label>
+  <input type="radio" name="test" id="no" value="No" > No </input>
+  <input type="radio" name="test" id="yES" value="Yes"> Yes</input><br><br>
+            </div>
+  <div class="Lego">
+   <button type="button" onclick="window.location.href='End.html'"class ="Bs">Submit</button>
+        </form>
+        </div>
+    </div>
+    <script src="Js/Feedback.js">
+   
+</script>
+</body>
+</html>

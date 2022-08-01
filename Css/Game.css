@@ -1,0 +1,91 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FFF;
+    font-family:"arial";
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+input[type=text] {
+    padding: 0;
+    height: 30px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 162, 255, 0.15);
+    background-color: rgb(8, 8, 235);
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+  }
+
+.container{
+	 border: 3px solid #fff;
+     padding: 20px;
+	 width:500px;
+     margin:auto;
+     
+}
+
+.sbs{
+	 width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid black;
+    
+    
+}
+#B{
+    background-color: rgb(8, 93, 173);
+}
+#A{
+    background-color: rgb(209, 33, 2);
+}
+
+#_dice_{	
+	border:solid;
+}
+
+#_shake_{
+	border:dotted;
+	background:#F90;
+	display:block;
+}  
+
+#_throw_{
+	border:dotted;
+	background:#000;
+	display:none;
+	color:#FFFFFF;
+}	
+
+#_again_{
+	border:dotted;
+	background:#000;
+	display:none;
+	color:#FFFF00;
+}
