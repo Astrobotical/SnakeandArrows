@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Snake and Arrows</title>
-    <link rel="stylesheet" href="Css/Game.css">
+    <link rel="stylesheet" href="/Css/Game.css">
         <!--<link rel="stylesheet" href="Css/Gamepage.css"> 
         <!--<link rel="stylesheet" href="Css/800px.css" media="screen and (max-width: 800px)"> 
         <link rel="stylesheet" href="Css/menu.css">-->
@@ -16,15 +16,17 @@
     <center>   
 	<div  class = "container">
     <div id="A" class = "sbs" id="main">
-	    <label>Tile Name:</label>
-        <input type="text" value = "68" id="titlename" readonly>
+        <label for="Timer">Timer:</label>
+        <span id="Timer" style="color:white;"></span><br>
+	    <label for="titlename">Tile Name:</label>
+        <input type="text" style="align-items: center;" value = "68" id="titlename" readonly>
 	    <br>
 		<br>
         <div id="_dice_">
             <img id="die" src="">
         </div>
         
-        <p align="center">Result: <b id="result"> </b> </p>
+        <p style="align-self:center;">Result: <b id="result"> </b> </p>
         
         <br /><br />
         

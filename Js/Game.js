@@ -6,9 +6,24 @@ var Symbol2 = "Shieldboi";
 
 var totalSeconds = 0;
 setInterval(setTime, 1000);
-
+let Minutecounter = 0;
 function setTime() {
   ++totalSeconds;
+  if(Minutecounter == 0)
+  {
+	document.getElementById('Timer').innerHTML = totalSeconds +" Seconds";
+  }
+  else if(Minutecounter != 0)
+  {
+	document.getElementById('Timer').innerHTML = Minutecounter +" Min " + totalSeconds +" Seconds";
+  }
+ if(totalSeconds == 60)
+  {
+	  totalSeconds = 0;
+	  Minutecounter++;
+	  document.getElementById('Timer').innerHTML = "Minutes " + Minutecounter + ":" + totalSeconds;
+  }else{}
+ 
   console.log(totalSeconds);
 }
 
@@ -48,7 +63,7 @@ var position = 68;
 var spawned = false;
 var prevdisplay = "";
 var presstwice = false;
-window.addEventListener("load", title)
+//window.addEventListener("load", title)
 
 var N1 = "Genesis";
 	var N2 = "Illusion";
@@ -504,7 +519,7 @@ function Commentary(webpage)
 function shakeDice(){
 	document.getElementById("result").innerHTML = "";
 	dieFaceSrc = document.getElementById("die");     
-	dieFaceSrc.src ="./Image/die.gif";	
+	dieFaceSrc.src ="/Image/die.gif";	
 	document.getElementById("_throw_").style.display = "block";
 	document.getElementById("_again_").style.display = "none";
 	document.getElementById("_shake_").style.display = "none";
@@ -1468,12 +1483,12 @@ function throwDice(){
 	}
 	
 	switch(die_Val){
-		case 1: dieFaceSrc.src = "./Image/1.png"; break;
-		case 2: dieFaceSrc.src = "./image/2.png"; break;
-		case 3: dieFaceSrc.src = "./image/3.png"; break;
-		case 4: dieFaceSrc.src = "./image/4.png"; break;
-		case 5: dieFaceSrc.src = "./image/5.png"; break;
-		case 6: dieFaceSrc.src = "./image/6.png"; break;
+		case 1: dieFaceSrc.src = "/Image/1.png"; break;
+		case 2: dieFaceSrc.src = "/image/2.png"; break;
+		case 3: dieFaceSrc.src = "/image/3.png"; break;
+		case 4: dieFaceSrc.src = "/image/4.png"; break;
+		case 5: dieFaceSrc.src = "/image/5.png"; break;
+		case 6: dieFaceSrc.src = "/image/6.png"; break;
 		default: shakeAgain =true; break;
 	}
     } 
