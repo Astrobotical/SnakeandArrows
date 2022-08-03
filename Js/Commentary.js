@@ -1,7 +1,19 @@
 
 var comment = localStorage.getItem("Comment");
-
-function Init()
+let Init = () => {
+	if (comment != null) {
+		if(comment <10){
+		document.getElementById("comment").src = "/Commentary/0" + comment + ".png";
+	}
+	else if(comment > 10){
+		document.getElementById("comment").src = "/Commentary/" + comment + ".png";
+	}
+	else{
+		document.getElementById("comment").innerHTML = "No commentary was selected";
+	}
+}
+}
+/*function Init()
 {
 	if (comment == 1)
 	{
@@ -293,3 +305,4 @@ function Init()
 	}
 	
 }
+*/

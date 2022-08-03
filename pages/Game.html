@@ -16,9 +16,9 @@
     <center>   
 	<div  class = "container">
     <div id="A" class = "sbs" id="main">
-        <label for="Timer">Timer:</label>
+        <label for="Timer" class="titles">Timer:</label>
         <span id="Timer" style="color:white;"></span><br>
-	    <label for="titlename">Tile Name:</label>
+	    <label for="titlename" class="titles">Tile Name:</label>
         <input type="text" style="align-items: center;" value = "68" id="titlename" readonly>
 	    <br>
 		<br>
@@ -26,7 +26,7 @@
             <img id="die" src="">
         </div>
         
-        <p style="align-self:center;">Result: <b id="result"> </b> </p>
+        <p  class="titles-heading" style="align-self:center;">Result: <b id="result"> </b> </p>
         
         <br /><br />
         
@@ -44,30 +44,30 @@
     </div>
 	
 	<div  id ="B"class = "sbs">
-	 <h3>Game Info</h3>
+	 <h3 class="titles-heading">Game Info</h3>
 	 <table>
         <tr>
-            <td>Player Symbol :</td>
+            <td><span class="titles">Player Symbol :</span></td>
             <td><input type="text"  id="Symname" readonly></td>
         </tr>
 	    
          <tr>
-            <td>Tile Name: </td>
+            <td> <span class="titles">Tile Name:</span></td>
             <td><input type="text" value = "Cosmic Conciousness" id="Nametime" readonly></td>
         </tr>
 		
 		<tr>
-		 <td>Previous Dice Roll: </td>
+		 <td> <span class="titles">Previous Dice Roll:</span> </td>
 		 <td><input type = "text" value = "" id = "prevroll" readonly></td><br>
 		 
         </tr>
 		<tr>
-		 <td>Previous Tile Name: </td>
+		 <td><span class="titles">Previous Tile Name: </span> </td>
 		 <td><input type = "text" value = "" id = "prevtile" readonly></td><br>
 		 
         </tr>
                 <tr>
-            <td>Commentary Page:</td>
+            <td> <span class="titles">Commentary Page:</span></td>
             <td><input type="button" value="Tile Commentary" id="Compage" onClick="Commentary('Commentary.html')"></td>
         </tr>
 	 </table>

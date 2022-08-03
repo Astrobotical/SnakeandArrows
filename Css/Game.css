@@ -89,3 +89,13 @@ input[type=text] {
 	display:none;
 	color:#FFFF00;
 }
+.titles{
+    font-size:10px;
+    font-weight:bold;
+    color:#FFF;
+}
+.titles-heading{
+    font-size:15px;
+    font-weight:bold;
+    color:#FFF;
+}
