@@ -1,0 +1,22 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Avatars{
+        display : grid;
+        justify-content : center;
+        grid-template-columns: 70%;
+        gap : 15px;
+    }
+    .Avatar-Title
+    {
+        font-family: 'Starborn';
+        font-size: 35px;
+        font-weight: bold;
+        color: rgb(9, 132, 247);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}

@@ -1,3 +1,7 @@
 /*Importing Global Font */
-@import url(startborn/startborn.otf);
 @import url(startborn/startborn.ttf);
+
+/*Importing Pages styling */
+
+
+@import url(Symbolscreen.css);
