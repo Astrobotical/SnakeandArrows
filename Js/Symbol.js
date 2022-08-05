@@ -4,7 +4,7 @@ function selection(webapge){
   var Secondsym =document.getElementById("SB").checked;
   
   if(Firstsym == true)
-      localStorage.setItem("UserOption","BOC");
+      localStorage.setItem("UserOption","Chakra");
   else if(Secondsym == true)
-      localStorage.setItem("UserOption","SB");
+      localStorage.setItem("UserOption","Shieldboi");
 }
