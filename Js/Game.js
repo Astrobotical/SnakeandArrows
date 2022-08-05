@@ -4,9 +4,18 @@ var Avatar;
 let Symbols = [{BOC :"Chakra"}, {SB : "Shieldboi"}];
 let Minutecounter = 0;
 var totalSeconds = 0;
-
-let setTime = () =>{++totalSeconds;if(Minutecounter == 0){document.getElementById('Timer').innerHTML = totalSeconds +" Seconds";}else if(Minutecounter != 0){document.getElementById('Timer').innerHTML = Minutecounter +" Min " + totalSeconds +" Seconds"; if(totalSeconds == 60){totalSeconds = 0; Minutecounter++; document.getElementById('Timer').innerHTML = "Minutes " + Minutecounter + ":" + totalSeconds;}else{}console.log(totalSeconds);}};
+let totalhours = 0;
 setInterval(setTime, 1000);
+function setTime (){
+	++totalSeconds;
+	if(Minutecounter == 0)
+	{document.getElementById('Timer').innerHTML = totalSeconds +" Seconds";}
+	else if(Minutecounter != 0)
+	{
+	document.getElementById('Timer').innerHTML = Minutecounter +" Min " + totalSeconds +" Seconds"; if(totalSeconds == 60);}
+	if(totalSeconds == 60){totalSeconds = 0; Minutecounter++; document.getElementById('Timer').innerHTML = Minutecounter +" Min " + totalSeconds +" Seconds";}
+	else{} if(Minutecounter == 60 || Minutecounter >= 60){++totalhours; document.getElementById('Timer').innerHTML = totalhours +"hrs " + Minutecounter +" Min " + totalSeconds +" Seconds"; } console.log(totalSeconds);};
+
 let SymbolChoice = () => {if (user_order == Symbols[0].BOC){document.getElementById("Symname").value = Symbols[0].BOC;}else if (user_order == Symbols[1].SB){document.getElementById("Symname").value = Symbols[1].SB;}};
 //Die Functions
 var die_Val; 
