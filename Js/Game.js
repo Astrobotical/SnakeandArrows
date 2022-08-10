@@ -67,9 +67,23 @@ var N1 = "Genesis";
 	document.addEventListener("DOMContentLoaded", function(event) { 
 		SymbolChoice();
 	  });
-	function Setname(){keys.forEach(async key => {if (position == key.ID){document.getElementById("Nametime").value = key.Name;tileArray.push(key.Name);}});}
+	function Setname(){keys.forEach(key => {if (position == key.ID){document.getElementById("Nametime").value = key.Name;tileArray.push(key.Name);}});}
 	function Commentary(webpage){localStorage.setItem("Comment", position);window.open(webpage);}
 	function shakeDice(){document.getElementById("result").innerHTML = "";dieFaceSrc = document.getElementById("die");dieFaceSrc.src ="/Image/die.gif";	document.getElementById("_throw_").style.display = "block";document.getElementById("_again_").style.display = "none";document.getElementById("_shake_").style.display = "none";}
+	function Findposition(ID){
+		keys.forEach(key => {if (key.ID == ID){
+			let newposition = key.ToID;
+			position = newposition;
+			document.getElementById("titlename").innerHTML = position;
+			if(key.Type === "arrows"){
+				total_ascend += 1;
+				arrowArray.push(key.Name);
+			}
+			else if(key.Type === "snake"){
+				total_descend += 1;
+				snakeArray.push(key.Name);
+			}
+		}});}
 	function throwDice(){
 	
 	if (presstwice == false)
@@ -83,10 +97,10 @@ var N1 = "Genesis";
 		position += 1;
 		Setname();
 		document.getElementById("titlename").value = position;
-		for( var i = 0; i < keys.length; i++ ) {
+	/*for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
-				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				console.log(typeof(keys[i].ID));
+				position = keys[i].ToID;
 				document.getElementById("titlename").value = position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -96,25 +110,26 @@ var N1 = "Genesis";
 					total_descend += 1;
 					snakeArray.push(keys[i].Name);
 				}
-				return;
+				break;
 			}
 			
 			else if(position == 68)
 			{
 				GameWon('statistics.html');
-			}
+			} */
+			return;
 		}
-	}
 
 	else if (die_Val == 2)
 	{
 		position += 2
 		Setname();
 		document.getElementById("titlename").value = position;
-		for( var i = 0; i < keys.length; i++ ) {
+		Findposition(position);
+	/*	for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
 				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				position = keys[i].ToID;
 				document.getElementById("titlename").value = position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -131,17 +146,19 @@ var N1 = "Genesis";
 			{
 				GameWon('statistics.html');
 			}
-		}
+		} */
+
 	}
 	else if (die_Val == 3)
 	{
 		position += 3
 		Setname();
 		document.getElementById("titlename").value = position;
-		for( var i = 0; i < keys.length; i++ ) {
+		Findposition(position);
+		/*for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
 				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				position = keys[i].ToID;
 				document.getElementById("titlename").value = position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -160,16 +177,18 @@ var N1 = "Genesis";
 				GameWon('statistics.html');
 			}
 		}
-
+		*/
 	}
 	else if (die_Val == 4)
 	{
 		position += 4
 		Setname();
-		for( var i = 0; i < keys.length; i++ ) {
+		document.getElementById("titlename").value = position;
+		Findposition(position);
+		/*for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
 				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				position = keys[i].ToID;
 				document.getElementById("titlename").value = position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -185,17 +204,18 @@ var N1 = "Genesis";
 			{
 				GameWon('statistics.html');
 			}
-		}
+		} */
 	}
 	else if (die_Val == 5)
 	{
 		position += 5
 		Setname();
 		document.getElementById("titlename").value = position;
-		for( var i = 0; i < keys.length; i++ ) {
+		Findposition(position);
+	/*	for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
 				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				position = keys[i].ToID;
 				document.getElementById("titlename").value = position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -212,7 +232,7 @@ var N1 = "Genesis";
 			{
 				GameWon('statistics.html');
 			}
-		}
+		} */
 
 	}
 	else if (die_Val == 6)
@@ -220,10 +240,11 @@ var N1 = "Genesis";
 		position += 6
 		Setname();
 		document.getElementById("titlename").value = position;
-		for( var i = 0; i < keys.length; i++ ) {
+		Findposition(position);
+	/*	for( var i = 0; i < keys.length; i++ ) {
 			if (position === keys[i].ID) {
 				console.log(keys[i].ID);
-				position = parseInt(keys[i].ToID);
+				position = keys[i].ToID;
 				document.getElementById("titlename").value =position;
 				if(keys[i].Type === "arrows"){
 					total_ascend += 1;
@@ -241,8 +262,9 @@ var N1 = "Genesis";
 				GameWon('statistics.html');
 			}
 		}
+	} */
 	}
-	}
+}
 	else
 	{
 		if (die_Val == 6)
@@ -312,3 +334,4 @@ function getPoints()
 		document.getElementById("result").innerHTML = parseInt(FaceVal);	
 	}
 }
+	

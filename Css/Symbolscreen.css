@@ -2,3 +2,7 @@
 .Avatars {
     justify-items: center;
 }
+.Avatars>.Avatar-Title{
+    font-size : 15px;
+    color:white;
+}
